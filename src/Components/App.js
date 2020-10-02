@@ -1,5 +1,6 @@
 import React from 'react';
 import unsplash from '../API/unsplash';
+import ImageList from './ImageList';
 import SearchBar from './SearchBar';
 
 //Access Key P7GxzTFODnO7VpFjm8Rav9M07vk2hoORqniRg5RdTX8
@@ -19,7 +20,7 @@ class App extends React.Component {
         return(
             <div className="ui container" style={{marginTop: '5%'}}>
                 <SearchBar onSubmit={this.onSearchSubmit} />
-                Found: { this.state.images.length}
+                <ImageList images={this.state.images} />
             </div>
         )
     }
